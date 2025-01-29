@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url('../assets/home/background-home-desktop.jpg');
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav img {
+    width: 3%;
+    height: 10%;
+    margin-left: 5%;
+    margin-top: 5%;   
+}
+
+nav hr {
+    width: 50%;
+    height: 0;
+    margin-top: 6.5%;
+    z-index: 1;
+    position: relative;
+    left: 5%;
+    
+}
+
+nav #hamburger {
+    display: none;
+}
+
+nav #close {
+    display: none;
+}
+
+nav ul {
+    width: 100%;
+    left: 2%;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    right: 0px;
+    position: relative;
+    top: 40px;
+    text-align: center;
+    padding-top: 2%;
+    backdrop-filter: blur(110px);
+    
+
+}
+
+nav ul li {
+    padding-left: 35px;
+    padding-left: 15px;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    text-decoration: none;
+    margin-left: 20px;
+
+}
+
+main {
+    color: white;
+   display: grid;
+   grid-template-areas: 'h3 .'
+                        'h1 .'
+                        'p button';
+                        padding-left: 15%;
+                        padding-top: 10%;
+}
+
+main h3 {
+    grid-area: h3;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+main h1 {
+    grid-area: h1;
+    text-transform: uppercase;
+    font-size: 120px;
+    font-weight: 100;
+    position: relative;
+    bottom: 80px;
+}
+main p {
+    grid-area: p;
+    width: 310px;
+    position: relative;
+    bottom: 150px;
+    color: rgba(239, 239, 239, 0.3);
+}
+
+main button {
+   grid-area: button; 
+   border-radius: 50%;
+   width: 50%;
+   height: 180%;
+   font-size: 24px;
+   text-transform: uppercase;
+   position: relative;
+   bottom: 250px;
+   border: none;
+   background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url('../assets/home/background-home-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    nav img {
+        width: 7%;
+        height: 10%;
+        margin-left: 5%;
+        margin-top: 5%;   
+    }
+    
+    nav hr {
+      display: none;
+        
+    }
+
+    nav #hamburger {
+        display: flex;
+        width: 7%;
+        cursor: pointer;
+    }
+
+    nav #close {
+        display: none;
+        width: 3%;
+        position: relative;
+        right: 150px;
+        cursor: pointer;
+        
+    }
+    
+    nav ul {
+        width: 50%;
+        left: 2%;
+        display: none;
+        list-style: none;
+        flex-direction: column;
+        position: relative;
+        top: 40px;
+        text-align: center;
+        padding-top: 2%;
+        backdrop-filter: blur(110px);
+        
+        
+    
+    }
+    
+    nav ul li {
+        padding-top: 15px;
+        padding-right: 100px;
+        
+    }
+    
+    nav ul li a {
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: 2px;
+        text-decoration: none;
+        margin-left: 20px;
+    
+    }
+
+    
+    nav ul li a:hover{
+        border-bottom: 2px solid white;
+    
+    }
+    
+    main {
+        color: white;
+       display: grid;
+       grid-template-areas: 'h3'
+                            'h1'
+                            'p'
+                            'button';
+                            padding-left: 25%;
+                            padding-top: 10%;
+    }
+    
+    main h3 {
+        grid-area: h3;
+        padding-left: 50px;
+        
+    }
+    
+   
+    main p {
+        grid-area: p;
+        position: relative;
+        left: 50px;
+       
+    }
+    
+    main button {
+       grid-area: button; 
+       width: 40%;
+       height: 650%;
+       position: relative;
+       bottom: 110px;
+       left: 90px;
+      
+    }
+
+
+}

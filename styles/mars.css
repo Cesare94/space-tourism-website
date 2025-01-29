@@ -1,0 +1,332 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+    color: rgba(239, 239, 239, 0.766);
+    
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav img {
+    width: 3%;
+    height: 10%;
+    margin-left: 5%;
+    margin-top: 5%;   
+}
+
+nav hr {
+    width: 50%;
+    height: 0;
+    margin-top: 6.5%;
+    z-index: 1;
+    position: relative;
+    left: 5%;
+    
+}
+
+nav ul {
+    width: 100%;
+    left: 2%;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    right: 0px;
+    position: relative;
+    top: 40px;
+    text-align: center;
+    padding-top: 2%;
+    backdrop-filter: blur(110px);
+    
+
+}
+
+nav ul li {
+    padding-left: 35px;
+    padding-left: 15px;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    margin-left: 20px;
+    color: rgba(239, 239, 239, 0.766);
+
+}
+
+
+nav #hamburger {
+    display: none;
+    width: 7%;
+}
+
+nav #close {
+    display: none;
+    width: 3%;
+    position: relative;
+    right: 150px;
+    
+}
+
+main {
+    display: grid;
+    grid-template-areas: 'h2 ul'
+    'img ul'
+    'img h1'
+    'img p'
+    'img hr'
+    'img ultimate';
+    grid-template-columns: 2fr 1fr;
+    
+}
+
+main h2 {
+    grid-area: h2;
+    text-transform: uppercase;
+    margin-left: 20%;
+    margin-top: 15%;
+    
+}
+main img {
+    grid-area: img;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+main ul {
+    grid-area: ul;
+    display: flex;
+    margin-top: 45%;
+    list-style: none;
+    padding-left: 0;
+    text-transform: uppercase;
+    
+
+}
+main ul li {
+    padding-right: 20px;
+}
+main ul li a {
+    text-decoration: none;
+    color: rgba(239, 239, 239, 0.766);
+    
+}
+
+main ul li a:hover {
+    border-bottom: 5px solid rgba(239, 239, 239, 0.766);
+    padding: 5px;
+}
+main h1 {
+    grid-area: h1;
+    font-size: 72px;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 30px;
+}
+
+main p {
+    grid-area: p;
+    position: relative;
+    bottom: 100px;
+
+}
+main hr {
+    grid-area: hr;
+    width: 100%;
+    height: 0;
+    position: relative;
+    bottom: 100px;
+}
+
+main .ultimate {
+    grid-area: ultimate;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-areas: 'distance time';
+}
+
+main .distance {
+    grid-area: distance;
+}
+
+main b {
+    position: relative;
+    bottom: 100px;
+}
+main .time {
+   grid-area: time;
+}
+
+main strong {
+    position: relative;
+    bottom: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url('../assets/home/background-home-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    nav img {
+        width: 7%;
+        height: 10%;
+        margin-left: 5%;
+        margin-top: 5%;   
+    }
+    
+    nav hr {
+      display: none;
+        
+    }
+
+    nav #hamburger {
+        display: flex;
+        width: 7%;
+        cursor: pointer;
+    }
+
+    nav #close {
+        display: none;
+        width: 3%;
+        position: relative;
+        right: 150px;
+        cursor: pointer;
+        
+    }
+    
+    nav ul {
+        width: 50%;
+        left: 2%;
+        display: none;
+        list-style: none;
+        flex-direction: column;
+        position: relative;
+        top: 40px;
+        text-align: center;
+        padding-top: 2%;
+        backdrop-filter: blur(110px);
+        
+        
+    
+    }
+    
+    nav ul li {
+        padding-top: 15px;
+        padding-right: 100px;
+        
+    }
+    
+    nav ul li a {
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: 2px;
+        text-decoration: none;
+        margin-left: 20px;
+    
+    }
+
+    
+    nav ul li a:hover{
+        border-bottom: 2px solid white;
+    
+    }
+
+    main {
+        display: grid;
+        grid-template-areas: 'h2'
+        'img'
+        'ul'
+        'h1'
+        'p'
+        'ultimate';
+        grid-template-columns: 1fr;
+        
+    }
+    
+    main h2 {
+        grid-area: h2;
+        margin-left: 20%;
+        
+        
+    }
+    main img {
+        grid-area: img;
+        margin-left: 15%;
+        
+    }
+    main ul {
+        grid-area: ul;
+        display: flex;
+        margin-top: 15%;
+        margin-left: 23%;
+        
+        
+    
+    }
+  
+
+    main h1 {
+        grid-area: h1;
+        margin-left: 25%;
+       
+    }
+    
+    main p {
+        grid-area: p;
+        position: relative;
+        bottom: 60px;
+        text-align: center;
+        width: 400px;
+        left: 13%;
+    
+    }
+    main hr {
+        display: none;
+    }
+    
+    main .ultimate {
+        grid-area: ultimate;
+        display: grid;
+        grid-template-areas: 'distance' 
+                               'time';
+    }
+    
+    main .distance {
+        grid-area: distance;
+    }
+    
+    main b {
+        position: relative;
+        bottom: 120px;
+        left: 36%;
+    }
+    main .time {
+       grid-area: time;
+    }
+    
+    main strong {
+        position: relative;
+        bottom: 90px;
+        left: 36%;
+
+    }
+}
